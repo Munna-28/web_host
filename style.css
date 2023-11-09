@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #030c41;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: hsl(178, 95%, 49%);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#audioPlayer {
+    width: 100%;
+    max-width: 250px; /* Adjusted max-width for smaller screens */
+    margin: 20px 0;
+}
+
+#songList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    cursor: pointer;
+    margin: 5px; /* Adjusted margin for smaller screens */
+    padding: 5px 10px; /* Adjusted padding for smaller screens */
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-size: 14px;
+}
+
+li:hover {
+    background-color: #f2f2f2;
+}
+
+button {
+    margin: 5px; /* Adjusted margin for smaller screens */
+    padding: 5px 10px; /* Adjusted padding for smaller screens */
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.play-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+button.pause-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+button.shuffle-btn {
+    background-color: #008CBA;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#currentSong {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffae00;
+}
+
+/* Collapsible menu styles */
+.menu-icon {
+    display: block;
+    /* Add styles for your menu icon */
+}
+
+.menu {
+    display: none;
+    /* Add styles for your menu */
+}
+
+.menu-icon:checked + .menu {
+    display: block;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 18px; /* Adjusted font size */
+    }
+
+    li, button {
+        font-size: 10px; /* Adjusted font size */
+    }
+}
